@@ -39,4 +39,10 @@ public class IrestaurantServiceImp implements IrestaurantService {
 		irestauarntDao.save(restaurant);
 		
 	}
+
+	@Override
+	public  Restaurant findByName(String restaurantName) {
+		return irestauarntDao.findByName(restaurantName);
+		
+	}
 }

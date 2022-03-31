@@ -44,6 +44,19 @@ public class IuserServiceImp  implements  IuserSerivce{
 		
 	}
 
+	@Override
+	public User getUserByUserNameAndPassword(String userName, String Passord) {
+		return iuserDao.findUserByNameAndPassword(userName,Passord);		
+	}
+
+	@Override
+	public List<User> findByUserName(String userName) {
+		// TODO Auto-generated method stub
+		return iuserDao.findByUserName(userName) ;
+	}
+
+	
+
 	
     
 }

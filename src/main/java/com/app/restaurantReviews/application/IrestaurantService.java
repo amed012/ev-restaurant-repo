@@ -13,5 +13,7 @@ public interface IrestaurantService {
     public List<Restaurant> getAllRestaurants();
     public void deleteRestaurantById(Long idRestaurant);
     public void updateRestaurant(Restaurant restaurant);
+    public List<Restaurant> findByName(String restaurantName);
+
 
 }

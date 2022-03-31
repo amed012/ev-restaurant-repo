@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Restaurant")
+@CrossOrigin
 public class RestaurantController {
     @Autowired
     IrestaurantService irestaurentService;
@@ -47,4 +48,11 @@ public class RestaurantController {
 
     }
 
+    @RequestMapping(value = "/restaurantByName", method = RequestMethod.GET)
+    public List<Restaurant> getRestaurantByUserName(@Param("name") String name) {
+
+        return irestaurentService.findByName(name);
+
+    }
+ 
 }
